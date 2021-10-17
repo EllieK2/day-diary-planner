@@ -1,4 +1,4 @@
-console.log("hello"); 
+ 
 const time = $(this).attr('data-time'); 
 const hour = moment().hour();
 
@@ -32,11 +32,12 @@ for (let i=9; i < 18; i++)
 console.log(timeArray);
 
 
-//adding colours
+//copied from the google to add some background colours  
 
-function display()
-{
-var col=document.getElementById("demo");
-col.style.color="red";
-}
-console.log('Red');
+setInterval(
+    function () {
+      var randomColor = Math.floor(Math.random()*16777215).toString(16);
+      document.body.style.backgroundColor = "#"+randomColor;
+    },1000);
+
+
